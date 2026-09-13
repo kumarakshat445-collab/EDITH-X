@@ -1,0 +1,17 @@
+{
+  "name": "EDITH-X",
+  "install": "./scripts/cloud-agent-install.sh",
+  "ports": [
+    {
+      "name": "API",
+      "port": 8000
+    }
+  ],
+  "terminals": [
+    {
+      "name": "API Server",
+      "command": "source .venv/bin/activate && uvicorn edith.main:app --host 0.0.0.0 --port 8000 --reload",
+      "description": "EDITH-X FastAPI development server"
+    }
+  ]
+}
