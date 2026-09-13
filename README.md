@@ -24,6 +24,8 @@ Open `http://localhost:3000/command-center`.
 
 ## API
 
+### Core Endpoints
+
 - `GET /health`
 - `POST /api/v1/chat/`
 - `GET /api/v1/agents/status`
