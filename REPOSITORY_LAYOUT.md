@@ -3,30 +3,20 @@
 ```
 /workspace/
 ├── README.md
-├── .gitignore
+├── docs/PROPOSAL.md
+├── requirements.txt
 ├── .cursor/environment.json
-├── scripts/cloud-agent-install.sh
-├── backend/
-│   ├── requirements.txt
-│   └── app/
-│       ├── __init__.py
-│       ├── main.py
-│       ├── core/          (config, security)
-│       ├── api/v1/        (chat, agents, sandbox, telemetry, memory)
-│       ├── engine/
-│       │   ├── swarm/     (graph, nodes, state)
-│       │   ├── tools/     (registry)
-│       │   ├── sandbox/   (manager)
-│       │   └── compiler/  (pipeline)
-│       └── models/        (schemas, database)
-└── frontend/
-    ├── package.json
-    ├── next.config.mjs
-    ├── tsconfig.json
-    ├── tailwind.config.ts
-    ├── postcss.config.mjs
-    └── src/
-        ├── app/           (layout, page, command-center, globals.css)
-        ├── components/    (NeuralStream, ViewportEngine, MonacoWorkbench)
-        └── lib/websocket.tsx
+├── scripts/
+│   ├── cloud-agent-install.sh
+│   └── fetch-ai-hub-models.sh
+├── models/snapdragon/     (fetched QNN/ONNX assets, not committed)
+├── edith/
+│   ├── main.py            (FastAPI app)
+│   ├── catalog.py         (Qualcomm AI Hub model catalog)
+│   ├── runtime.py         (QNN-first ONNX Runtime providers)
+│   ├── networks.py        (ONNX control graphs)
+│   ├── features.py
+│   ├── usecases.py
+│   └── demo.py
+└── tests/test_snapdragon_usecases.py
 ```
