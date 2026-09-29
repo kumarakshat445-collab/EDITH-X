@@ -1,0 +1,5 @@
+{
+  "name": "Counter",
+  "template": "counter",
+  "description": "8-bit counter that increments by 2. The contract is +1 per clock."
+}
