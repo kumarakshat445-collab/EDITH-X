@@ -3,7 +3,15 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-if [[ ! -d .venv ]]; then
+# python3 -m venv needs ensurepip, which Ubuntu ships in python3-venv.
+if ! python3 -c 'import ensurepip' >/dev/null 2>&1; then
+  sudo DEBIAN_FRONTEND=noninteractive apt-get update
+  sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3-venv
+fi
+
+# A failed venv create leaves a directory without pip. Recreate it.
+if [[ ! -x .venv/bin/python ]] || ! .venv/bin/python -m pip --version >/dev/null 2>&1; then
+  rm -rf .venv
   python3 -m venv .venv
 fi
 
