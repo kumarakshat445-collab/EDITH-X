@@ -1,0 +1,31 @@
+{
+  "models": [
+    {
+      "id": "hexa-r-rtl-analyst",
+      "name": "HEXA-R RTL Analyst",
+      "kind": "rule-engine",
+      "quantization": "deterministic",
+      "format": "python",
+      "backend": "cpu-rules",
+      "device": "CPU",
+      "path": null,
+      "size_bytes": null,
+      "status": "active",
+      "notes": "Parses RTL, runs static checks, generates structural testbenches, and proposes patches only when a rule matches source and tool output."
+    },
+    {
+      "id": "llama3-8b-int8-onnx",
+      "name": "Llama 3 8B",
+      "kind": "llm",
+      "quantization": "INT8",
+      "format": "onnx",
+      "backend": "onnxruntime",
+      "device": "Qualcomm Hexagon NPU when QNNExecutionProvider is active, otherwise CPU",
+      "path": "models/model.onnx",
+      "tokenizer": "models/tokenizer",
+      "size_bytes": null,
+      "status": "not-installed",
+      "notes": "Drop a Qualcomm AI Hub or ONNX export at models/model.onnx. HEXA-R will not report this model as active until an inference session is created."
+    }
+  ]
+}

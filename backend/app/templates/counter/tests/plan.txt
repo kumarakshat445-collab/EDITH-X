@@ -1,0 +1,2 @@
+After reset, count must equal the number of clocks since release.
+The RTL adds 8'd2, so the generated testbench is expected to fail until that literal is corrected.

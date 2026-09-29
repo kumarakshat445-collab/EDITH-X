@@ -1,0 +1,5 @@
+{
+  "name": "UART Controller",
+  "template": "uart",
+  "description": "8N1 UART loopback. The receiver samples one clock later than the bit center."
+}

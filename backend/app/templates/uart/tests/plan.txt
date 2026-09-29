@@ -1,0 +1,7 @@
+Directed loopback bytes, generated with the testbench:
+55 alternating bits
+A3 mixed
+00 all zeros
+FF all ones
+01 single bit
+A missing rx_valid is a timeout failure.
