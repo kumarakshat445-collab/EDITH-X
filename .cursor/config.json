@@ -1,26 +1,17 @@
 {
-  "name": "EDITH-X V2",
+  "name": "Inkloom",
   "install": "./scripts/cloud-agent-install.sh",
   "ports": [
     {
-      "name": "API",
+      "name": "Inkloom",
       "port": 8000
-    },
-    {
-      "name": "Frontend",
-      "port": 3000
     }
   ],
   "terminals": [
     {
-      "name": "Backend API",
-      "command": "source .venv/bin/activate && cd backend && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload",
-      "description": "EDITH-X V2 FastAPI backend"
-    },
-    {
-      "name": "Frontend HUD",
-      "command": "cd frontend && npm run dev",
-      "description": "Next.js command center HUD"
+      "name": "Inkloom",
+      "command": "source .venv/bin/activate && uvicorn inkloom.main:app --host 0.0.0.0 --port 8000 --reload",
+      "description": "Inkloom brand governance app"
     }
   ]
 }

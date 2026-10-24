@@ -1,0 +1,3 @@
+"""Inkloom brand governance."""
+
+__version__ = "1.0.0"
