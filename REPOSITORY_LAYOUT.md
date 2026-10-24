@@ -1,32 +1,13 @@
-# Repository Layout
+# Repository layout
 
 ```
 /workspace/
-├── README.md
-├── .gitignore
-├── .cursor/environment.json
-├── scripts/cloud-agent-install.sh
-├── backend/
-│   ├── requirements.txt
-│   └── app/
-│       ├── __init__.py
-│       ├── main.py
-│       ├── core/          (config, security)
-│       ├── api/v1/        (chat, agents, sandbox, telemetry, memory)
-│       ├── engine/
-│       │   ├── swarm/     (graph, nodes, state)
-│       │   ├── tools/     (registry)
-│       │   ├── sandbox/   (manager)
-│       │   └── compiler/  (pipeline)
-│       └── models/        (schemas, database)
-└── frontend/
-    ├── package.json
-    ├── next.config.mjs
-    ├── tsconfig.json
-    ├── tailwind.config.ts
-    ├── postcss.config.mjs
-    └── src/
-        ├── app/           (layout, page, command-center, globals.css)
-        ├── components/    (NeuralStream, ViewportEngine, MonacoWorkbench)
-        └── lib/websocket.tsx
+├── inkloom/           FastAPI app, review engine, workflow, seed data
+├── static/            Desk UI (HTML, CSS, JS) and self-hosted fonts
+├── tests/             Governance, permission, and workflow tests
+├── scripts/           Environment install
+├── requirements.txt
+└── data/              Local SQLite database and uploads (not committed)
 ```
+
+`edith/` is the previous stub API and is not the product.
